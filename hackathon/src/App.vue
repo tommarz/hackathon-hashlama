@@ -1,12 +1,21 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link v-if="!isMain" to="/">Back to Main</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    isMain: function() {
+      return this.$route.name === 'Main';
+    }
+  }
+}
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
