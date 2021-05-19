@@ -1,0 +1,16 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Product 1",
+            "desc": "This is Product #1",
+            "author-id": 20
+        },
+        {
+            "id": 2,
+            "name": "Product 2",
+            "desc": "This is Product #2",
+            "author-id": 3
+        }
+    ]
+}
