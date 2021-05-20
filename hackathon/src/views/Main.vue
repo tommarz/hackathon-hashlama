@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+      <h1>Welcome to the Main Page!</h1>
       <Products :products="products"/>
   </div>
 </template>
