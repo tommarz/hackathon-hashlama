@@ -15,9 +15,19 @@ export default {
   },
   data() {
       return {
-          products: [{id: 1, name: 'AAA', desc: 'BBB'}, {id: 50, name: 'WWWWWW', desc: 'prod 2'}]
+          products: []
       };
-  }
+  },
+  methods: {
+    async fetchProducts() {
+      const res = await fetch('api/products');
+      const data = await res.json();
+      return data;
+    },
+  },
+  async created() {
+    this.products = await this.fetchProducts()
+  },
 }
 </script>
 
